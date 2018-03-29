@@ -1,0 +1,53 @@
+.scroll {
+	position: fixed;
+	bottom: 0; 
+	right: 0;
+	width: 200px;
+	height: 200px;
+	background: url(../img/mouse_scrolling@3x.svg) center center no-repeat;
+    background-size: 130px 140px;
+	z-index: 99;
+}
+
+#_height {
+	display: block;
+} 
+
+.fullscreen-bg {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: -100;
+}
+
+#fullscreen-bg-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    #fullscreen-bg-frame {
+        height: 300%;
+        top: -100%;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    #fullscreen-bg-frame {
+        width: 300%;
+        left: -100%;
+    }
+}
+
+@media (max-width: 767px) {
+    #fullscreen-bg-frame {
+        width: 300%;
+        left: 100%;
+    }
+}
